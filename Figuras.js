@@ -1,15 +1,20 @@
 console.group("cuadrados");
-const ladocuadrado=5;
+// const ladocuadrado=5;
 
 
-console.log("los lados del cuadrado son de:"+ladocuadrado+" cm");
+// console.log("los lados del cuadrado son de:"+ladocuadrado+" cm");
 
-const perimetrocuadrado=ladocuadrado*4;
-console.log("el perimetro es:"+perimetrocuadrado+" cm");
+function perimetrocuadrado(lado){
+    return lado*4;
+}
+// console.log("el perimetro es:"+perimetrocuadrado+" cm");
 
 
-const areacuadrado=ladocuadrado*ladocuadrado;
-console.log("el area es:"+areacuadrado+" cm2");
+function areacuadrado(lado){
+    return lado*lado;
+
+}
+// console.log("el area es:"+areacuadrado+" cm2");
 console.groupEnd();
 
 
@@ -17,22 +22,44 @@ console.groupEnd();
 
 console.group("triangulos")
 
-const ladotriangulo1=6;
-const ladotriangulo2=5;
-const base=4;
-const altura=5.5;
+// const ladotriangulo1=6;
+// const ladotriangulo2=5;
+// const base=4;
+// const altura=5.5;
 
 
 
 
-console.log("los lados del triangulo miden:"+ladotriangulo1+" cm,"+ladotriangulo2+"cm,"+base+"cm,"+"la altura es de "+altura+"cm");
+// console.log("los lados del triangulo miden:"+ladotriangulo1+" cm,"+ladotriangulo2+"cm,"+base+"cm,"+"la altura es de "+altura+"cm");
 
-const perimetrotriangulo=ladotriangulo1+ladotriangulo2+base
-console.log("el perimetro es:"+perimetrotriangulo+" cm");
+function perimetrotriangulo(lado1,lado2,base){
+    return lado1+lado2+base;
 
 
-const areatriangulo=(base*altura)/2;
-console.log("el area es:"+areatriangulo+" cm2");
+}
+
+
+function areatriangulo(base,altura){
+    return (base*altura)/2
+
+}
+
 
 console.groupEnd();
 
+function calcular_perimetro_cuadrado(){
+    const input=document.getElementById("input_cuadrado");
+    const value=input.value;
+
+    const perimetro=perimetrocuadrado(value);
+    alert(perimetro);
+
+}
+
+function calcular_area(){
+    const input=document.getElementById("input_cuadrado");
+    const value=input.value;
+
+    const area= areacuadrado(value);
+    alert(area);
+}
